@@ -21,6 +21,8 @@ class Application
         if !@@cart.include?(i)
           @@cart << i 
           resp.write "added #{i}\n"
+        else 
+          resp.write "We don't have that item\n"
         end 
       end 
     
