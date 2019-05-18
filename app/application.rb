@@ -18,9 +18,10 @@ class Application
       end 
     elsif req.path.match(/add/)
       @@items.each do |i| 
-        if !@@cart.include(i)
+        if !@@cart.include?(i)
           @@cart << i 
         end 
+      end 
     
     elsif req.path.match(/search/)
       search_term = req.params["q"]
