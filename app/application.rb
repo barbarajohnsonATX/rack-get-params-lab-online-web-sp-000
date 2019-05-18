@@ -17,6 +17,7 @@ class Application
         @@cart.each { |i| resp.write "#{i}\n" }
       end 
     elsif req.path.match(/add/)
+      @@items.each { |i| @@cart << i }
     
     elsif req.path.match(/search/)
       search_term = req.params["q"]
