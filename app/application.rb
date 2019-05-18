@@ -20,7 +20,7 @@ class Application
       @@items.each do |i| 
         if !@@cart.include?(i)
           @@cart << i 
-          resp.write "Added #{i}\n"
+          resp.write "added #{i}\n"
         end 
       end 
     
