@@ -22,6 +22,7 @@ class Application
       @@items.each do |i| 
         if !@@cart.include?(i)
           @@cart << i 
+          resp.write "Added #{i}\n"
         end 
       end 
     
