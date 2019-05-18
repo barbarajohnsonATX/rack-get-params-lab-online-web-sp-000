@@ -1,3 +1,4 @@
+require 'pry'
 class Application
   @@cart = []
   @@items = ["Apples","Carrots","Pears"]
@@ -17,6 +18,7 @@ class Application
         @@cart.each { |i| resp.write "#{i}\n" }
       end 
     elsif req.path.match(/add/)
+      binding.pry 
       @@items.each do |i| 
         if !@@cart.include?(i)
           @@cart << i 
